@@ -1,0 +1,610 @@
+html { font-size: 62.5%; }
+body{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", ".HiraKakuInterface-W1";
+    /*
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", ".HiraKakuInterface-W2";
+    font-family: "Helvetica Neue", 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro';
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", 'ヒラギノ角ゴ Pro W6','Hiragino Kaku Gothic Pro';
+    */
+    background: #FFFFFF;
+}
+h1,h2,h3,h4,h5,h6 {
+
+    font-weight: normal;
+}
+
+
+/* 10px */
+/*
+50#FFF8E1
+100#FFECB3
+200#FFE082
+300#FFD54F
+400#FFCA28
+500#FFC107
+600#FFB300
+700#FFA000
+800#FF8F00
+900#FF6F00
+*/
+
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    clear: both;
+}
+
+/* header */
+
+
+header img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 40px auto;
+}
+
+
+/* メガメニュー */
+
+li.nav__mega ul.nav__category {
+    color: #031E36;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 253px;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding: 20px 2%;
+    background: #FFF;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    z-index: 2;
+}
+
+li.nav__mega:hover ul.nav__category {
+    visibility: visible;
+    opacity: 1;
+}
+
+li.nav__mega ul.nav__category > li {
+    padding: 4px 0;
+    float: left;
+    width: 16%;
+    border: none;
+    text-align:left;
+    font-size: 0.8rem;
+
+}
+
+li.nav__mega ul.nav__category > li:nth-child(6n+5) {
+    margin: 0 1%;
+}
+
+li.nav__mega ul.nav__category > li:nth-child(6n-3) {
+    margin-left: 20px;
+}
+
+li.nav__mega ul.nav__category > li:nth-child(-n+3) {
+    clear: both;
+}
+
+/* カテゴリーテキスト */
+
+li.nav__mega ul.nav__category > li.nav___textCate{
+    width: 100px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #031E36;
+    margin: 5px 0 10px 0;
+}
+
+
+/* サーチ条件ボタン */
+
+li.nav__mega ul.nav__category > li.nav___search{
+    float: right;
+    display:inline-flex;
+    width: 500px;
+    margin-top: 10px;
+}
+
+
+.nav-search_req {
+    margin: 0 20px;
+    display: inline-block;
+    width: 180px;
+    height: 44px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: #fff;
+    border: 1px solid #031E36;
+    color: #031E36;
+    line-height: 44px;
+}
+.nav-search_req::before,
+.nav-search_req::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+.nav-search_req,
+.nav-search_req::before,
+.nav-search_req::after {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.nav-search_req:hover {
+    background-color: #fff;
+    border-color: #59b1eb;
+    color: #59b1eb;
+}
+
+
+
+/* 検索ボックス */
+
+.nav-search {
+    width: 200px;
+    background: url(../img/input4.gif) left top no-repeat;
+    display: block;
+    height: 24px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.nav-search_text {
+    width: 156px;
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    border: 1px solid #FFF;
+}
+.nav-searchBtn {
+    position: absolute;
+    top: 3px;
+    left: 174px;
+}
+
+
+
+/* チェックボックス */
+
+.nav__category input[type="checkbox"] {
+    display: none;
+}
+.nav__category label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 28px;
+    cursor: pointer;
+}
+.nav__category label::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: -8px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.nav__category input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    content: '';
+    top: 7px;
+    left: 3px;
+    width: 13px;
+    height: 5px;
+    border-left: 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+/* サーチ下矢印 */
+
+.init-bottom:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 0 15px;
+    border-right: 1px solid #031E36;
+    border-bottom: 1px solid #031E36;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 卓球のやつ */
+.content img{
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+/* ボーダー */
+
+.nav hr{
+    margin: 15px 0;
+}
+
+.nav hr.nav_bottomHr{
+    margin-bottom: 0;
+}
+
+
+/* メニュー */
+
+.nav{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_main {
+    display: flex;
+}
+.nav_main li {
+    width: 395px;
+    padding: 20px 0;
+    flex-grow:1;
+    text-align:center;
+}
+
+.nav_main li+ li {
+    border-left: 1px solid #031E36 ;
+}
+
+.nav_main li:first-child{
+    border-left:none;
+}
+
+.nav_main li a {
+    display: block;
+    color: #031E36 ;
+    text-decoration: none;
+}
+
+.nav_main li a:hover {
+    color: #999;
+}
+.nav_main > li:hover {
+    color: #031E36 ;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.nav__category li a:hover {
+    color: #2E2E2E ;
+}
+
+
+/* .hero画像 */
+.hero{
+    width: 100%;
+    height: 300px;
+    background-color: #FFE082;
+}
+
+.main{
+
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* サイドバー sidebar */
+
+
+
+.sidebar{
+    display: block;
+    width:250px;
+    border: solid 0.1rem;
+    border-color: black;
+    min-height: 480px;
+    text-align: center;
+    padding: 0.2rem;
+    margin-top: 50px;
+    float: left;
+    color: #031E36;
+}
+
+.sidebar_newcomments{
+    border-bottom:  0.2rem;
+    border-bottom-style: inset;
+}
+
+.sidebar_circlename{
+    font-size: 1.2rem;
+}
+
+.sidebar_comments{
+    font-size: 0.2rem;
+}
+
+.sidebar_circlepic{
+    width: 10rem;
+    height: 6rem
+}
+
+.sidebar-search{
+    position: relative;
+    padding-top: 1rem;
+    color: #666;
+}
+
+.sidebar_search-text {
+    width: 10rem;
+    height: 1.2rem;
+    border: 0.2px solid;
+    color: #444;
+}
+
+.sidebar_btn {
+
+}
+
+.sidebar_list{
+    padding-left: 1.4rem;
+    text-align: left;
+    list-style-type: none;
+}
+
+.sidebar_search_btn{
+    padding: 0.2rem;
+    font-size: 1rem;
+    border: solid 0.1rem;
+    margin: 1rem;
+}
+
+.btn1{
+    border-color: #0044ff;
+    color: #0044ff;
+    border-color: #828282;
+    color: #828282;
+}
+
+.btn1:hover{
+    transition: 0.2s;
+    background-color: #0044ff;
+    color: #fff;
+    background-color: #828282;
+    color: #fff;
+
+}
+
+.btn2{
+    color: #ff4040;
+    border-color: #ff4040;
+    border-color: #828282;
+    color: #828282;
+}
+
+.btn2:hover{
+    transition: 0.2s;
+    color: #fff;
+    background-color: #828282;
+}
+
+
+
+/* contents */
+.wrapper{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 900px;
+    /*     height: 60rem; */
+    background-color: #FFFFFF;
+    float: left;
+    color: #031E36;
+}
+
+.hero2{
+    width: 700px;
+    margin: 0 auto;
+    margin-left: 100px;
+    position:relative;
+}
+.hero2 img{
+    width: 700px;
+    background: #031E36;
+    margin: 0 auto;
+    border-bottom: 10px solid #031E36;
+    box-shadow: 0px 5px #B7A380;
+}
+.caption{
+    position:absolute;
+    top: 50px;
+    right: 40px;
+    width: 250px;
+    background-color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+.caption_title{
+    font-family: "Helvetica Neue", 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro';
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    color: #B7A380;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.caption_line {
+    margin-bottom: 25px;
+    border: none;
+    width: 80%;
+    border-top: 2px #B7A380 solid;
+}
+.caption_box{
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 20px;
+}
+.caption_description{
+    color: #031E36;
+    letter-spacing: 0.6rem;
+    line-height: 2.1rem;
+    font-size: 1.1rem;
+}
+
+
+.sns{
+    margin: 30px auto;
+    display: flex;
+    width: 400px;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.sns_item{
+    display: block;
+    font-size: 3.8rem;
+    color: #031E36;
+}
+.sns_item:hover{
+    color: #B7A380;
+}
+
+.contents{
+    margin: 50px auto 0;
+    display: flex;
+    width: 80%;
+    flex-direction:row;
+    justify-content: center;
+    justify-content: flex-start;
+    /*  justify-content:space-around; */
+    flex-wrap:wrap;
+}
+.contents_card{
+    background: #ffffff;
+    height: 185px;
+    width: 220px;
+    padding: 8px;
+    /* border-bottom: 5px solid; */
+    /* border-radius: 9px; */
+    text-align: center;
+    padding-top: 25px;
+}
+.contents_border-bottom{
+    border-bottom: 2px solid #031E36;
+}
+.contents_border-right{
+    border-right: 2px solid #031E36;
+
+}
+.contents_icon{
+    letter-spacing: 1rem;
+    font-size: 5rem;
+}
+.contents_heading{
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.contents_title{
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", 'ヒラギノ角ゴ Pro W6','Hiragino Kaku Gothic Pro';
+    font-weight: 700;
+}
+.contents_email{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contents_line {
+    margin-bottom: 25px;
+    border: none;
+    width: 50%;
+    border-top: 3px #031E36 solid;
+}
+
+
+.contents_img{
+    margin: 30px auto 0;
+}
+
+.contents_info{
+    margin: 0 auto;
+    width: 750px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.contents_info_article{
+    width: 300px;
+    font-size: 2.5rem;
+
+}
+.description{
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+}
+
+
+/* footer */
+
+footer{
+    background-color: #454546 ;
+    color: #fff;
+}
+
+footer p{
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.2rem;
+}
+
+.footer_nav{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer_nav .footer_nav-main{
+    display: flex;
+    justify-content : flex-end;
+}
+
+.footer_nav .footer_nav-main li{
+    width: 120px;
+    padding: 25px 0 7px 0 ;
+    text-align: center;
+}
+
+.footer_nav .footer_nav-main a {
+    color: #fff;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.footer_nav-policy{
+    float: right;
+}
+
+.footer_nav .footer_nav-policy li{
+    padding: 2px 0px;
+    text-align: right;
+}
+
+.footer_nav .footer_nav-policy li a{
+
+    color: #fff;
+    font-size: 0.5rem;
+    text-decoration: none;
+}
